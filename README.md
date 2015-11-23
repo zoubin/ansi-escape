@@ -1,8 +1,6 @@
 # ansi-escape
 ANSI escape codes for manipulating the terminal
 
-[![npm](https://nodei.co/npm/ansi-escape.png?downloads=true)](https://www.npmjs.org/package/ansi-escape)
-
 [![version](https://img.shields.io/npm/v/ansi-escape.svg)](https://www.npmjs.org/package/ansi-escape)
 [![status](https://travis-ci.org/zoubin/ansi-escape.svg?branch=master)](https://travis-ci.org/zoubin/ansi-escape)
 [![dependencies](https://david-dm.org/zoubin/ansi-escape.svg)](https://david-dm.org/zoubin/ansi-escape)
