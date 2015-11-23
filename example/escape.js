@@ -1,5 +1,9 @@
 var csi = require('..')
 
+String.prototype.repeat = function (n) {
+  return (new Array(n + 1)).join(this)
+}
+
 var conf = [
   ['red', 'bold', '1'.repeat(10)],
   ['green', 'underline', '2'.repeat(8)],
