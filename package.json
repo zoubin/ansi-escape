@@ -1,6 +1,6 @@
 {
   "name": "ansi-escape",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ANSI escape codes for manipulating the terminal",
   "main": "index.js",
   "scripts": {
