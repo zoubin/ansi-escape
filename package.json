@@ -1,0 +1,34 @@
+{
+  "name": "ansi-escape",
+  "version": "0.0.1",
+  "description": "ANSI escape codes for manipulating the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoubin/ansi-escape.git"
+  },
+  "keywords": [
+    "ansi",
+    "escape",
+    "terminal"
+  ],
+  "author": "zoubin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoubin/ansi-escape/issues"
+  },
+  "homepage": "https://github.com/zoubin/ansi-escape#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-tape": "0.0.6",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.0",
+    "task-tape": "^1.0.0"
+  }
+}
