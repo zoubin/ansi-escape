@@ -30,9 +30,36 @@ console.log(
 
 ```
 
-Output:
+**Output**
 
 ![chain](example/chain.png)
+
+## escape
+Type: `Function`
+
+Accept arguments like [util.format](https://nodejs.org/docs/latest/api/util.html#util_util_format_format).
+
+```js
+var csi = require('ansi-escape')
+
+console.log(
+  csi.escape(
+    'Age: %d, Size: %j',
+    10,
+    { h: 180, w: 80 }
+  )
+)
+
+
+```
+
+**Output**
+
+```
+Age: 10, Size: {"h":180,"w":80}
+
+```
+
 
 ## Cursors
 

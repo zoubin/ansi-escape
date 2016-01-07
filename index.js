@@ -1,30 +1,33 @@
-function CSI(escape) {
-  this.escape = typeof escape === 'function' ? escape : identity
-}
+var util = require('util')
 
-function identity(s) {
-  return s
+function CSI(escape) {
+  this.escape = typeof escape === 'function' ? escape : function () {
+    return util.format.apply(util, arguments)
+  }
 }
 
 function defineEscape(name, creator) {
   Object.defineProperty(CSI.prototype, name, {
     get: function () {
       var self = this
-      var escape = creator()
       function csi() {
-        escape = creator.apply(null, arguments)
-        return new CSI(function (str) {
-          return self.escape(escape(str))
-        })
+        return new CSI(formatter(self, creator.apply(null, arguments)))
       }
-      csi.escape = function (str) {
-        return self.escape(escape(str))
-      }
+      csi.escape = formatter(this, creator())
+
       /* eslint-disable no-proto */
       csi.__proto__ = CSI.prototype
       return csi
     },
   })
+}
+
+function formatter(predecessor, escape) {
+  return function () {
+    return predecessor.escape(escape(
+      util.format.apply(util, arguments)
+    ))
+  }
 }
 
 function defineEscapes(escapes) {
